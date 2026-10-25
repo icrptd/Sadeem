@@ -1,0 +1,9 @@
+node_modules/
+build/
+dist/
+Output/
+*.spec
+*.exe
+*.zip
+__pycache__/
+*.pyc

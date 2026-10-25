@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="nebula" data-accent="rose">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>سديم</title>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div id="app">
+    <header id="topbar">
+      <div class="brand" id="brand" title="سديم">
+        <img src="logo.svg" alt="" width="28" height="28">
+        <span class="brand-name">سديم</span>
+      </div>
+      <nav id="menubar" aria-label="Menus"></nav>
+      <div class="spacer"></div>
+      <div id="quick" class="quick"></div>
+    </header>
+
+    <div id="tabbar">
+      <div id="tabs" role="tablist"></div>
+      <button id="newTab" class="icon-btn" aria-label="New tab"></button>
+    </div>
+
+    <div id="banner" hidden></div>
+
+    <main id="workspace">
+      <section id="editorPane">
+        <div id="findPanel" hidden></div>
+        <div id="editorHost"></div>
+      </section>
+      <section id="previewPane" hidden>
+        <div id="previewBody" class="md"></div>
+      </section>
+    </main>
+
+    <footer id="statusbar"></footer>
+  </div>
+
+  <div id="overlay"></div>
+  <div id="toasts" aria-live="polite"></div>
+  <div id="printArea"></div>
+  <script src="app.js"></script>
+</body>
+</html>

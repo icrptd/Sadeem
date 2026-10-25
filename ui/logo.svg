@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#150f2a"/><stop offset="1" stop-color="#05030c"/></linearGradient>
+<clipPath id="tile"><rect width="256" height="256" rx="58"/></clipPath>
+<filter id="wisp" x="-30%" y="-30%" width="160%" height="160%">
+<feTurbulence type="fractalNoise" baseFrequency="0.011 0.016" numOctaves="5" seed="11" result="n"/>
+<feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 2.6 -0.95" result="m"/>
+<feGaussianBlur in="SourceGraphic" stdDeviation="14" result="s"/>
+<feComposite in="s" in2="m" operator="in" result="c"/>
+<feGaussianBlur in="c" stdDeviation="1.6"/>
+</filter>
+<filter id="soft"><feGaussianBlur stdDeviation="16"/></filter>
+<filter id="tiny"><feGaussianBlur stdDeviation="1.1"/></filter>
+<radialGradient id="core" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff"/><stop offset=".25" stop-color="#ffd6e6" stop-opacity=".9"/><stop offset="1" stop-color="#ff5c93" stop-opacity="0"/></radialGradient>
+</defs>
+<g clip-path="url(#tile)">
+<rect width="256" height="256" fill="url(#bg)"/>
+<g filter="url(#soft)" opacity=".55">
+<ellipse cx="150" cy="120" rx="80" ry="52" fill="#6b3cff" transform="rotate(-28 150 120)"/>
+<ellipse cx="108" cy="140" rx="60" ry="38" fill="#ff3d84" transform="rotate(-28 108 140)"/>
+</g>
+<g filter="url(#wisp)">
+<ellipse cx="160" cy="104" rx="92" ry="46" fill="#8b6cff" transform="rotate(-30 160 104)"/>
+<ellipse cx="104" cy="148" rx="84" ry="40" fill="#ff5c93" transform="rotate(-30 104 148)"/>
+<ellipse cx="136" cy="126" rx="60" ry="24" fill="#ffc2a8" transform="rotate(-30 136 126)"/>
+<ellipse cx="190" cy="176" rx="50" ry="22" fill="#38d6e8" transform="rotate(-30 190 176)"/>
+</g>
+<circle cx="128" cy="128" r="46" fill="url(#core)" opacity=".85"/>
+<g fill="#fff">
+<circle cx="52" cy="62" r="2.2"/><circle cx="214" cy="52" r="2.8"/><circle cx="198" cy="212" r="2"/>
+<circle cx="36" cy="188" r="1.8" opacity=".8"/><circle cx="82" cy="30" r="1.6" opacity=".7"/><circle cx="226" cy="132" r="1.6" opacity=".7"/>
+<circle cx="64" cy="224" r="1.5" opacity=".6"/><circle cx="176" cy="38" r="1.4" opacity=".6"/><circle cx="24" cy="116" r="1.3" opacity=".6"/>
+<circle cx="150" cy="226" r="1.5" opacity=".7"/><circle cx="108" cy="56" r="1.2" opacity=".6"/><circle cx="234" cy="92" r="1.2" opacity=".5"/>
+</g>
+</g>
+</svg>
